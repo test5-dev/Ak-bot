@@ -1,4 +1,4 @@
-{
+p{
   "name": "Avishka_X-MD",
   "version": "1.0.0",
   "description": "A WhatsApp bot created using Node.js",
@@ -20,7 +20,6 @@
     "fs-extra": "^11.1.0",
     "path": "^0.12.7",
     "node-fetch": "^2.6.1",
-    "megajs": "^1.1.0",
     "vm": "^0.1.0",
     "qrcode-terminal": "^0.12.0",
     "yt-search" : "2.11.1",
@@ -38,10 +37,6 @@
     "ytsearch-venom":"1.0.0",
     "ytdl-core": "^4.11.5",
     "child_process":"1.0.2",
-    "buffer":"6.0.3",
-    "cheerio":"1.0.0-rc.12",
-    "@blackamda/telegram-image-url": "1.0.0",
-    "pixaldrain-sinhalasub": "git+https://github.com/DarkMakerofc/pixaldrain-sinhalasub.git",
-    "@sl-code-lords/movie-api": "1.0.0"
+    "@blackamda/telegram-image-url": "1.0.0"
   }
 }

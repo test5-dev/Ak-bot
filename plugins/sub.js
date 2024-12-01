@@ -3,7 +3,7 @@ const { cmd, commands } = require('../command')
 const { getBuffer, getGroupAdmins, getRandom, h2k, isUrl, Json, runtime, sleep, fetchJson} = require('../lib/functions')
 const {subsearch , subdl }  = require('@sl-code-lords/si-subdl')
 cmd({
-    pattern: "slsub1",
+    pattern: "slsub",
     react: "📃",
     alias: ["srisub"],
     desc: "Download Sinhala Subtitles from Web Site",

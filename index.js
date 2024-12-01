@@ -171,25 +171,23 @@ if(!isOwner && config.MODE === "private") return
 if(!isOwner && isGroup && config.MODE === "inbox") return
 if(!isOwner && !isGroup && config.MODE === "groups") return
 //--------------------| HYPER-MD Anti Bad |--------------------//
-
-        if (isGroup && config.ANTI_BAD_WORDS_ENABLED) {
-            if (config.ANTI_BAD_WORDS) {
-                const badWords = config.ANTI_BAD_WORDS;
-                const bodyLower = body.toLowerCase();
-
-                // Check if the sender is an admin or the bot itself
-                if (!isAdmins && !isOwner) {
-                    for (const word of badWords) {
-                        if (bodyLower.includes(word.toLowerCase())) {
-                            // Notify the group and delete the message
-                            await conn.sendMessage(from, { text: "🚩 Don't use any bad words!" }, { quoted: mek });
-                            await conn.sendMessage(from, { delete: mek.key });
-                            return; // Exit early if a bad word is found
-                        }
-                    }
-                }
-            }
-        }
+if (isGroup && config.ANTI_BAD_WORDS_ENABLED) {
+if (config.ANTI_BAD_WORDS) {
+ const badWords = config.ANTI_BAD_WORDS;
+ const bodyLower = body.toLowerCase();
+// Check if the sender is an admin or the bot itself
+        if (!isAdmins && !isOwner) {
+         for (const word of badWords) {
+        if (bodyLower.includes(word.toLowerCase())) {
+// Notify the group and delete the message
+await conn.sendMessage(from, { text: "🚩 Don't use any bad words!" }, { quoted: mek });
+await conn.sendMessage(from, { delete: mek.key });
+return; // Exit early if a bad word is found
+}
+}
+}
+}
+}
 
 //--------------------| HYPER-MD Anti Bot |--------------------//
 

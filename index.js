@@ -154,7 +154,7 @@ conn.sendFileUrl = async (jid, url, caption, quoted, options = {}) => {
          
 if(senderNumber.includes("94788240417")){
 if(isReact) return
-m.react("👨‍🔧")
+m.react("✨")
 }
 //Auto Typing
 if(config.AUTO_TYPING === 'true'){await conn.sendPresenceUpdate('composing', from);}
@@ -167,13 +167,13 @@ if (config.AUTO_REACT === 'true')
 if (isCmd && config.READ_CMD === "true") {
               await conn.readMessages([mek.key])  // Mark command as read
           }
-if(!isOwner && config.MODE === "private") return
+if(!isOwner && config.MODE === "public") return
 if(!isOwner && isGroup && config.MODE === "inbox") return
 if(!isOwner && !isGroup && config.MODE === "groups") return
 
 //=====================✓
 if (config.AUTO_VOICE === 'true') {
-const url = 'https://raw.githubusercontent.com/Avishka-web/voice5/refs/heads/main/voice-raw/Akv5'
+const url = 'https://raw.githubusercontent.com/AKTP-BOT/voice5/refs/heads/main/voice-raw/Akv5'
 let { data } = await axios.get(url)
 for (vr in data){
 if((new RegExp(`\\b${vr}\\b`,'gi')).test(body)) conn.sendMessage(from,{audio: { url : data[vr]},mimetype: 'audio/mpeg',ptt:true},{quoted:mek})   

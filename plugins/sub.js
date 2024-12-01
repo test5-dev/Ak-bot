@@ -31,7 +31,7 @@ const maru =`\n🧾 *Avishka_X-MD LUCIFER SUB DOWNLOADER* 🧾
 reply('🚫 *Error Accurated !!*\n\n' + e )
 l(e)
 }
-})
+});
 
 cmd({
     pattern: "sublist",
@@ -55,7 +55,7 @@ const vid = await subsearch(q)
 reply('⛔ *Error accurated !!*\n\n' + e )
 l(e)
 }
-})
+});
 
 cmd({
     pattern: "subdl",

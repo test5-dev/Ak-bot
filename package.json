@@ -39,7 +39,7 @@
     "ytdl-core": "^4.11.5",
     "child_process":"1.0.2",
     "buffer":"6.0.3",
-    "cheerio":"1.0.0-rc.12",
+    "cheerio":"1.0.0",
     "@blackamda/telegram-image-url": "1.0.0",
     "@mrnima/tiktok-downloader":"1.0.0",
     "@mrnima/facebook-downloader":"1.0.0",

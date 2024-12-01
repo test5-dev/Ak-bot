@@ -19,5 +19,10 @@ AUTO_TYPING: process.env.AUTO_TYPING || "false",
 ALWAYS_RECORDING: process.env.ALWAYS_RECORDING || "true",
 BOT_NAME: process.env.BOT_NAME || "➺Avishka_X-MD࿐",
 AUTO_REACT: process.env.AUTO_REACT || "true",
-OWNER_REACT: process.env.OWNER_REACT || "true"
+OWNER_REACT: process.env.OWNER_REACT || "true",
+ANTI_BAD_WORDS_ENABLED: process.env.ANTI_BAD_WORDS_ENABLED || "true",
+ANTI_BAD_WORDS: (process.env.ANTI_BAD_WORDS || "pakayo,huththo").split(','),
+ANTI_LINK: process.env.ANTILINK || "true",
+ANTI_BOT: process.env.ANTI_BOT || "true",
+ANTI_DELETE: process.env.ANTI_DELETE || "true"
 };

@@ -170,6 +170,70 @@ if (isCmd && config.READ_CMD === "true") {
 if(!isOwner && config.MODE === "private") return
 if(!isOwner && isGroup && config.MODE === "inbox") return
 if(!isOwner && !isGroup && config.MODE === "groups") return
+//--------------------| HYPER-MD Anti Bad |--------------------//
+
+        if (isGroup && config.ANTI_BAD_WORDS_ENABLED) {
+            if (config.ANTI_BAD_WORDS) {
+                const badWords = config.ANTI_BAD_WORDS;
+                const bodyLower = body.toLowerCase();
+
+                // Check if the sender is an admin or the bot itself
+                if (!isAdmins && !isOwner) {
+                    for (const word of badWords) {
+                        if (bodyLower.includes(word.toLowerCase())) {
+                            // Notify the group and delete the message
+                            await conn.sendMessage(from, { text: "🚩 Don't use any bad words!" }, { quoted: mek });
+                            await conn.sendMessage(from, { delete: mek.key });
+                            return; // Exit early if a bad word is found
+                        }
+                    }
+                }
+            }
+        }
+
+//--------------------| HYPER-MD Anti Bot |--------------------//
+
+if (isGroup && config.ANTI_BOT === "true") {
+    // Check if the sender is another bot (Baileys-based or similar) and is not an admin or owner
+    if (!isAdmins && !isOwner && m.isBaileys) {
+        console.log('Detected another bot in the group');
+
+        // Check if the current bot has admin rights
+        if (isBotAdmins) {
+            // Delete the bot's message and send a warning message
+            await conn.sendMessage(from, { delete: mek.key });
+            await conn.sendMessage(from, { text: '🚫 Bot detected and removed. Only admins can add bots to this group.' });
+
+            // Remove the bot from the group (this assumes the detected bot is the sender)
+            await conn.groupParticipantsUpdate(from, [sender], "remove");
+        } else {
+            // Notify that the bot does not have admin rights to remove the detected bot
+            await conn.sendMessage(from, { text: '🚫 Bot detected. I need admin rights to remove it.' });
+        }
+        return; // Exit early since a bot was detected and handled
+    }
+}
+
+//--------------------| HYPER-MD Anti Link |--------------------//
+
+        if (isGroup && config.ANTI_LINK) {
+            // Define patterns for chat.whatsapp.com links
+            const chatLinkPattern = /chat\.whatsapp\.com\/(g|gb)\/[A-Z0-9]{5,}/i;
+
+            // Check if the message contains a chat.whatsapp.com link
+            if (chatLinkPattern.test(body)) {
+                // Check if the sender is an admin or the bot itself
+                if (!isBotAdmins && !isAdmins && !isOwner) {
+                    // Send a warning message and delete the message
+                    await conn.sendMessage(from, { text: '🚩 Links are not allowed in this group!' }, { quoted: mek });
+                    await conn.sendMessage(from, { delete: mek.key });
+                } else if (!isBotAdmins) {
+                    // Notify that the bot is not an admin
+                    await conn.sendMessage(from, { text: '🚩 I am not an admin, so I cannot delete messages with links.' }, { quoted: mek });
+                }
+                return; // Exit early if a link is found
+            }
+        }
 
 //=====================✓
 if (config.AUTO_VOICE === 'true') {
@@ -209,7 +273,48 @@ mek.type === "stickerMessage"
 ) {
 command.function(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply})
 }});
-//============================================================================ 
+//============================================================================
+//--------------------| HYPER-MD Anti Del |--------------------//
+
+conn.ev.on('messages.delete', async (message) => {
+    if (config.ANTI_DELETE === "true" && message.remoteJid.endsWith('@g.us')) {
+        try {
+            const deletedMessage = await conn.loadMessage(message.remoteJid, message.id)
+            if (deletedMessage) {
+                const deletedContent = deletedMessage.message
+
+                let notificationText = `🚨 Deleted Message Detected 🚨\n\n`
+                notificationText += `From: ${deletedMessage.pushName} (@${deletedMessage.participant.split('@')[0]})\n`
+
+                if (deletedContent) {
+                    if (deletedContent.conversation) {
+                        notificationText += `Message: ${deletedContent.conversation}`
+                    } else if (deletedContent.extendedTextMessage) {
+                        notificationText += `Message: ${deletedContent.extendedTextMessage.text}`
+                    } else if (deletedContent.imageMessage) {
+                        notificationText += `Message: [Image with caption: ${deletedContent.imageMessage.caption}]`
+                    } else if (deletedContent.videoMessage) {
+                        notificationText += `Message: [Video with caption: ${deletedContent.videoMessage.caption}]`
+                    } else {
+                        notificationText += `Message: [${Object.keys(deletedContent)[0]} message]`
+                    }
+                } else {
+                    notificationText += `Message: [Unable to retrieve deleted content]`
+                }
+
+                // Send notification to the chat where the message was deleted
+                await conn.sendMessage(message.remoteJid, { text: notificationText })
+
+                // If it's an image or video, send the media as well
+                if (deletedContent && (deletedContent.imageMessage || deletedContent.videoMessage)) {
+                    const media = await downloadMediaMessage(deletedMessage, 'buffer')
+                    await conn.sendMessage(message.remoteJid, { image: media, caption: 'Deleted media' })
+                }
+            }
+        } catch (error) {
+            console.error('Error handling deleted message:', error)
+        }
+    }
 
 })
 }

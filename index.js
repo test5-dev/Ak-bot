@@ -152,8 +152,8 @@ conn.sendFileUrl = async (jid, url, caption, quoted, options = {}) => {
             }
 //--------------------| HYPER-MD Anti Bad |--------------------//
 
-        if (isGroup && config.ANTI_BAD_WORDS_ENABLED === "true") {
-            if (config.ANTI_BAD_WORDS === "true") {
+        if (isGroup && config.ANTI_BAD_WORDS_ENABLED === 'true') {
+            if (config.ANTI_BAD_WORDS) {
                 const badWords = config.ANTI_BAD_WORDS;
                 const bodyLower = body.toLowerCase();
 

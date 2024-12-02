@@ -333,7 +333,7 @@ cmd({
         if (text.startsWith("1.")) {
           await client.sendMessage(chatId, {
             video: { url: videoUrlWithResolution },
-            caption: "\n* © ᴍᴀʟᴀᴋᴀ-ᴍᴅ ʙʏ ᴅᴀʀᴋ-ᴀʟꜰʜᴀ-ʙᴏᴛ . . . 👩‍💻*\n"
+            caption: "\n*©powered by Avishka_X-MD. . . 👩‍💻*\n"
           }, {
             quoted: receivedMessage
           });
@@ -342,7 +342,7 @@ cmd({
             document: { url: videoUrlWithResolution },
             mimetype: "video/mp4",
             fileName: `${video.title}.mp4`,
-            caption: "\n* © ᴍᴀʟᴀᴋᴀ-ᴍᴅ ʙʏ ᴅᴀʀᴋ-ᴀʟꜰʜᴀ-ʙᴏᴛ . . . 👩‍💻 *\n"
+            caption: "\n*powered by Avishka_X-MD . . 👩‍💻 *\n"
           }, {
             quoted: receivedMessage
           });

@@ -23,6 +23,5 @@ OWNER_REACT: process.env.OWNER_REACT || "true",
 ANTI_BAD_WORDS_ENABLED: process.env.ANTI_BAD_WORDS_ENABLED || "true",
 ANTI_BAD_WORDS: (process.env.ANTI_BAD_WORDS || "pakayo,huththo,hutto,hukapan,hukapn,pako,ponnaya").split(','),
 ANTI_LINK: process.env.ANTILINK || "true",
-ANTI_BOT: process.env.ANTI_BOT || "true",
-ANTI_DELETE: process.env.ANTI_DELETE || "true"
+ANTI_BOT: process.env.ANTI_BOT || "true"
 };

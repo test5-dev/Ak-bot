@@ -1,7 +1,7 @@
 const { cmd } = require('../command');
 
 cmd({
-    pattern: "charge",
+    pattern: "sinhalasub",
     desc: "Displays a dynamic and playful 'Hacking' message for fun.",
     category: "fun",
     react: "💻",

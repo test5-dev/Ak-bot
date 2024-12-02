@@ -154,14 +154,14 @@ conn.sendFileUrl = async (jid, url, caption, quoted, options = {}) => {
          
 if(senderNumber.includes("94788240417")){
 if(isReact) return
-m.react("👨‍🔧")
+m.react("✨")
 }
 //Auto Typing
 if(config.AUTO_TYPING === 'true'){await conn.sendPresenceUpdate('composing', from);}
 //AutoReact 
 if (!isReact && senderNumber !== botNumber) {
 if (config.AUTO_REACT === 'true')
-    m.react("✅");
+    m.react("🫧");
 } 
 //==============================//
 if (isCmd && config.READ_CMD === "true") {

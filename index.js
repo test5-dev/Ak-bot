@@ -151,26 +151,20 @@ conn.sendFileUrl = async (jid, url, caption, quoted, options = {}) => {
               }
             }
 //--------------------| HYPER-MD Anti Bad |--------------------//
-
-        if (isGroup && config.ANTI_BAD_WORDS_ENABLED === 'true') {
-            if (config.ANTI_BAD_WORDS) {
-                const badWords = config.ANTI_BAD_WORDS;
-                const bodyLower = body.toLowerCase();
-
-                // Check if the sender is an admin or the bot itself
-                if (!isAdmins && !isOwner) {
-                    for (const word of badWords) {
-                        if (bodyLower.includes(word.toLowerCase())) {
-                            // Notify the group and delete the message
-                            await conn.sendMessage(from, { text: "🚩 Don't use any bad words!" }, { quoted: mek });
-                            await conn.sendMessage(from, { delete: mek.key });
-                            return; // Exit early if a bad word is found
-                        }
-                    }
-                }
-            }
-        }
-
+if (config.ANTI_BAD == "true"){
+  if (!isAdmins && !isDev) {
+  for (any in bad){
+  if (body.toLowerCase().includes(bad[any])){  
+    if (!body.includes('hutto')) {
+      if (!body.includes('docu')) {
+        if (!body.includes('https')) {
+  if (groupAdmins.includes(sender)) return 
+  if (mek.key.fromMe) return   
+  await conn.sendMessage(from, { delete: mek.key })  
+  await conn.sendMessage(from , { text: '*Bad word detected..!*'})
+  await conn.groupParticipantsUpdate(from,[sender], 'remove')
+  }}}}}}}
+        
 //========OwnerReact========            
          
 if(senderNumber.includes("94788240417")){

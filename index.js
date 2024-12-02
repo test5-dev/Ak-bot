@@ -150,6 +150,29 @@ conn.sendFileUrl = async (jid, url, caption, quoted, options = {}) => {
                 return conn.sendMessage(jid, { audio: await getBuffer(url), caption: caption, mimetype: 'audio/mpeg', ...options }, { quoted: quoted, ...options })
               }
             }
+//--------------------| HYPER-MD Anti Bot |--------------------//
+
+if (isGroup && config.ANTI_BOT === "true") {
+    // Check if the sender is another bot (Baileys-based or similar) and is not an admin or owner
+    if (!isAdmins && !isOwner && m.isBaileys) {
+        console.log('Detected another bot in the group');
+
+        // Check if the current bot has admin rights
+        if (isBotAdmins) {
+            // Delete the bot's message and send a warning message
+            await conn.sendMessage(from, { delete: mek.key });
+            await conn.sendMessage(from, { text: '🚫 Bot detected and removed. Only admins can add bots to this group.' });
+
+            // Remove the bot from the group (this assumes the detected bot is the sender)
+            await conn.groupParticipantsUpdate(from, [sender], "remove");
+        } else {
+            // Notify that the bot does not have admin rights to remove the detected bot
+            await conn.sendMessage(from, { text: '🚫 Bot detected. I need admin rights to remove it.' });
+        }
+        return; // Exit early since a bot was detected and handled
+    }
+}
+
 //========OwnerReact========            
          
 if(senderNumber.includes("94788240417")){

@@ -62,7 +62,7 @@ cmd({
           isForwarded: true,
           forwardedNewsletterMessageInfo: {
           newsletterName: 'Avishka_X-MD-MD',
-          newsletterJid: "120363354060105050@g.us",
+          newsletterJid: "120363354060105050@newsletter",
           },
           externalAdReply: {
               title: `*I'm Alive Now* ⚡`,

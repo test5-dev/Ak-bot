@@ -24,11 +24,6 @@ cmd({
           const systemType = os.type();
           const freeMemory = (os.freemem() / 1024 / 1024).toFixed(2);
 
-          // Custom message for Render platform
-          let platformMessage = '';
-          if (platformName === 'Render') {
-              platformMessage = '\n🌟 You are currently hosting on Render! Enjoy seamless deployments.';
-          }
 
           // Status message to be sent
 

@@ -29,16 +29,16 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 ├ 10 • OTHER
 ├ 11 • NEWS
 ├ 12 • TOOLS
-├ 13 • LOGO
+├ 13 • LOGO Fixing
 ╰╼╼╼╼╼╼╼╼╼╼
 
 ╭────────❍──────❍❍➣
-┝❍ TOTAL COMMANDS : 182
+┝❍ All commands pannel
 ╰────────❍──────❍❍➣
 
 _🌟 Reply with the Number you want to select_
 
-> ©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍʀ ꜱᴇɴᴇꜱʜ `;
+> powered by Avishka_X-MD `;
 
                   // Sending the image with caption
           const vv = await conn.sendMessage(from, {
@@ -50,13 +50,13 @@ _🌟 Reply with the Number you want to select_
           forwardingScore: 999,
           isForwarded: true,
           forwardedNewsletterMessageInfo: {
-          newsletterName: 'HYPER-MD',
+          newsletterName: 'Avishka_X-MD',
           newsletterJid: "120363296605464049@newsletter",
           },
           externalAdReply: {
-              title: `HYPER-MD Menu List`,
+              title: `Avishka_X-MD Menu List`,
               body: `https://HYPER-md-main-web.vercel.app/`,
-              thumbnailUrl: `https://pomf2.lain.la/f/uzu4feg.jpg`,
+              thumbnailUrl: `https://iili.io/2c1i67f.jpg`,
               sourceUrl: ``,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -84,20 +84,16 @@ _🌟 Reply with the Number you want to select_
 ┝❍ .block
 ┝❍ .unblock
 ┝❍ .clearchats
-┝❍ .startnews
-┝❍ .stopnews
 ┝❍ .jid
 ┝❍ .gjid
 ╰────────────────❍❍➣
 
-> ©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍʀ ꜱᴇɴᴇꜱʜ `);
+> powered by Avishka_X-MD `);
                         break;
                     case '2':               
                         reply(`╭────────────────❍❍➣
  🔄 𝐂𝐨𝐧𝐯𝐞𝐫𝐭 𝐌𝐞𝐧𝐮
 ┝───────❍❍❍❍❍
-┝❍  .convert
-┝❍ .sticker2
 ┝❍ .tts
 ┝❍ .qmake
 ┝❍ .readmore
@@ -107,43 +103,21 @@ _🌟 Reply with the Number you want to select_
 ┝❍ .crop
 ┝❍ .round
 ┝❍ .toaudio
-┝❍ .toanime
 ┝❍ .currency
-┝❍ .url
 ┝❍ .img2url
 ┝❍ .trt
 ╰────────────────❍❍➣
 
-> ©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍʀ ꜱᴇɴᴇꜱʜ `);
+> powered by Avishka_X-MD `);
                         break;
                     case '3':               
                         reply(`╭────────────────❍❍➣
  👾 𝐀𝐢 𝐌𝐞𝐧𝐮
 ┝───────❍❍❍❍❍
 ┝❍ .ai
-┝❍ .bing
-┝❍ .copilot
-┝❍ .blackbox
-┝❍ .bingimgai
-┝❍ .gemini
-┝❍ .gpt4
-┝❍ .laland
-┝❍ .obfus
-┝❍ .prodia
-┝❍ .prodia2
-┝❍ .texttoimg1
-┝❍ .texttoimg2
-┝❍ .texttoimg3
-┝❍ .aemtv1
-┝❍ .aemtv2
-┝❍ .aemtv3
-┝❍ .aemtv4
-┝❍ .aemtv5
-┝❍ .aemtv6
-┝❍ .aemtv7
 ╰────────────────❍❍➣
 
-> ©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍʀ ꜱᴇɴᴇꜱʜ `);
+> powered by Avishka_X-MD `);
                         break;
                     case '4':               
                         reply(`╭────────────────❍❍➣
@@ -151,52 +125,40 @@ _🌟 Reply with the Number you want to select_
 ┝───────❍❍❍❍❍
 ┝❍ .lyric 
 ┝❍ .yts
-┝❍ .srepo
-┝❍ .weather1
-┝❍ .tiktoksearch
-┝❍ .horo
-┝❍ .google
-┝❍ .couplepp
-┝❍ .snumber
+┝❍ .repo
 ┝❍ .weather
+┝❍ .img
 ╰────────────────❍❍➣
 
-> ©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍʀ ꜱᴇɴᴇꜱʜ `);
+> powered by Avishka_X-MD `);
                         break;
                     case '5':               
                         reply(`╭────────────────❍❍➣
  📥 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐌𝐞𝐧𝐮
 ┝───────❍❍❍❍❍
-┝❍ .song2
+┝❍ .song
 ┝❍ .video
 ┝❍ .fb
 ┝❍ .tt
 ┝❍ .gdrive
-┝❍ .apkdl
-┝❍ .twitter
+┝❍ .apk
+┝❍ .id
 ┝❍ .apk
 ┝❍ .img
 ┝❍ .mfire
 ┝❍ .scloud
-┝❍ .song
-┝❍ .xnxx
 ┝❍ .xvideo
-┝❍ .mega
-┝❍ .gitclone
 ╰────────────────❍❍➣
 
-> ©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍʀ ꜱᴇɴᴇꜱʜ `);
+> powered by Avishka_X-MD `);
                         break;
                     case '6':               
                         reply(`╭────────────────❍❍➣
  🔧 𝐌𝐚𝐢𝐧 𝐌𝐞𝐧𝐮
 ┝───────❍❍❍❍❍
-┝❍  .runtime
 ┝❍ .alive
-┝❍ .allmenu
 ┝❍ .owner
 ┝❍ .support
-┝❍ .repo
 ┝❍ .about
 ┝❍ .system
 ┝❍ .ping
@@ -204,7 +166,7 @@ _🌟 Reply with the Number you want to select_
 ┝❍ .menu
 ╰────────────────❍❍➣
 
-> ©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍʀ ꜱᴇɴᴇꜱʜ `);
+> powered by Avishka_X-MD `);
                         break;
                     case '7':               
                         reply(`╭────────────────❍❍➣
@@ -225,35 +187,30 @@ _🌟 Reply with the Number you want to select_
 ┝❍ .gname
 ┝❍ .setsubject
 ┝❍ .tagall
-┝❍ .requests
-┝❍ .accept
-┝❍ .reject
-┝❍ .hidetag
 ┝❍ .kick
 ┝❍ .unlock
-┝❍ .lock
-┝❍ .approve
-┝❍ .poll
+┝❍ .block
 ┝❍ .getpic
 ╰────────────────❍❍➣
 
-> ©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍʀ ꜱᴇɴᴇꜱʜ `);
+> powered by Avishka_X-MD `);
                        break;
                     case '8':               
                         reply(`╭────────────────❍❍➣
  🎉 𝐅𝐮𝐧 𝐌𝐞𝐧𝐮
 ┝───────❍❍❍❍❍
 ┝❍ .animegirl
-┝❍ .dog
-┝❍ .fact
+┝❍ .animegirl1
+┝❍ .animegirl2
+┝❍ .animegirl3
+┝❍ .charge
 ┝❍ .hack
 ┝❍ .insult
 ┝❍ .joke
 ┝❍ .quote
-┝❍ .ronaldo
 ╰────────────────❍❍➣
 
-> ©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍʀ ꜱᴇɴᴇꜱʜ `);
+> powered by Avishka_X-MD `);
 
                         break;
                     case '9':               
@@ -261,33 +218,21 @@ _🌟 Reply with the Number you want to select_
  🎬 𝐌𝐨𝐯𝐢𝐞 𝐌𝐞𝐧𝐮
 ┝───────❍❍❍❍❍
 ┝❍ .movie
-┝❍ .jshare (ꜱɪɴʜᴀʟᴀ ꜱᴜʙ ᴍᴏᴠɪᴇ ᴊɪᴅ ꜱʜᴀʀᴇ)
-┝❍ .uploadme
-┝❍ .ytsmx
-┝❍ .uploadmovie
-┝❍ .moviekv
-┝❍ .uploadtv
-┝❍ .uploadtvm
-┝❍ .uploadmoviem
-┝❍ .uploadzip
-┝❍ .uploadzipn
-┝❍ .uploadzipfile
-┝❍ .imdb
 ┝❍ .gdmovie
 ╰────────────────❍❍➣
 
-> ©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍʀ ꜱᴇɴᴇꜱʜ `);
+> powered by Avishka_X-MD `);
 
                     break;
                     case '10':               
                         reply(`╭────────────────❍❍➣
  ⚙️ 𝐎𝐭𝐡𝐞𝐫 𝐌𝐞𝐧𝐮
 ┝───────❍❍❍❍❍
-┝❍ .anime1
-┝❍ .anime2
-┝❍ .anime3
-┝❍ .anime4
-┝❍ .anime5
+┝❍ .animegirl1
+┝❍ .animegirl2
+┝❍ .animegirl3
+┝❍ .animegirl4
+┝❍ .animegirl5
 ┝❍ .loli
 ┝❍ .waifu
 ┝❍ .neko
@@ -295,13 +240,11 @@ _🌟 Reply with the Number you want to select_
 ┝❍ .maid
 ┝❍ .awoo
 ┝❍ .define
-┝❍ .githubstalk
 ┝❍ .gpass
 ┝❍ .wiki
-┝❍ .ss
 ╰────────────────❍❍➣
 
-> ©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍʀ ꜱᴇɴᴇꜱʜ `);
+> powered by Avishka_X-MD `);
 
                     break;
                     case '11':               
@@ -313,14 +256,9 @@ _🌟 Reply with the Number you want to select_
 ┝❍ .derananews
 ┝❍ .lankadeepanews
 ┝❍ .bbcnews
-┝❍ .ios
-┝❍ .esananews
-┝❍ .technews
-┝❍ .wabeta
-┝❍ .news
 ╰────────────────❍❍➣
 
-> ©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍʀ ꜱᴇɴᴇꜱʜ `);
+> powered by Avishka_X-MD `);
 
                     break;
                     case '12':               
@@ -332,24 +270,9 @@ _🌟 Reply with the Number you want to select_
 ┝❍ .deep
 ┝❍ .fast
 ┝❍ .reverse2
-┝❍ .calc
-┝❍ .translate
-┝❍ .reverse
-┝❍ .tempmail
-┝❍ .checkmail
-┝❍ .delmail
-┝❍ .encode
-┝❍ .decode
-┝❍ .npmstalk
-┝❍ .iplookup
-┝❍ .instastalk
-┝❍ .githubuser
-┝❍ .password
-┝❍ .hijact
-┝❍ .antispam
 ╰────────────────❍❍➣
 
-> ©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍʀ ꜱᴇɴᴇꜱʜ `);
+> powered by Avishka_X-MD `);
 
                     break;
                     case '13':               
@@ -360,7 +283,7 @@ _🌟 Reply with the Number you want to select_
 ┝❍ .logo2
 ╰────────────────❍❍➣
 
-> ©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍʀ ꜱᴇɴᴇꜱʜ `);
+> powered by Avishka_X-MD `);
                         break;
                     default:
                         reply("Invalid option. Please select a valid option🔴");

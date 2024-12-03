@@ -1,3 +1,8 @@
+const { cmd, commands } = require('../command');
+const config = require('../config');
+const os = require('os');
+const { getBuffer, getGroupAdmins, getRandom, h2k, isUrl, Json, fetchJson , runtime ,sleep } = require('../lib/functions')
+
 cmd({
     pattern: "menu",
     alias: ["list"],

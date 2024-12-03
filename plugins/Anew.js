@@ -193,7 +193,7 @@ cmd({
             document: { url: downloadLink },
             mimetype: 'audio/mp3',
             fileName: video.title + ".mp3",
-            caption: "\n*© ᴍᴀʟᴀᴋᴀ-ᴍᴅ ʙʏ ᴅᴀʀᴋ-ᴀʟꜰʜᴀ-ʙᴏᴛ · · ·*\n "
+            caption: "\n*© powered by Avishka_X-MD· · ·*\n "
           }, { quoted: newMessage });
 
           await bot.sendMessage(remoteJid, {

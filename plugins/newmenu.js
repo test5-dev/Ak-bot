@@ -56,11 +56,11 @@ _🌟 Reply with the Number you want to select_
           isForwarded: true,
           forwardedNewsletterMessageInfo: {
           newsletterName: 'Avishka_X-MD',
-          newsletterJid: "120363296605464049@newsletter",
+          newsletterJid: "120363354060105050@g.us",
           },
           externalAdReply: {
               title: `Avishka_X-MD Menu List`,
-              body: `https://HYPER-md-main-web.vercel.app/`,
+              body: `https://Avishka-md-main-web.vercel.app/`,
               thumbnailUrl: `https://iili.io/2c1i67f.jpg`,
               sourceUrl: ``,
               mediaType: 1,
